@@ -3,3 +3,4 @@
 i am gonna log in everyday and log my code everyday 
 <br>
 more like a practice 
+# DAY 1 - We started up with variables and data type and will stop when my parent says and now proceeding towards string functions 
