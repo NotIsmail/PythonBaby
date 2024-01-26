@@ -10,4 +10,4 @@ we are stopping today as of dated 25/1/24 at 11:05 pm
 # SEE YA TOMO
 #January 26/1/2024 
 <br>
-today we r learning taaking input 
+today we r learning taking input 
