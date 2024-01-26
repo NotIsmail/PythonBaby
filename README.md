@@ -8,3 +8,6 @@ We started up with variables and data type and will stop when my parent says and
 <br>
 we are stopping today as of dated 25/1/24 at 11:05 pm
 # SEE YA TOMO
+#January 26/1/2024 
+<br>
+today we r learning taaking input 
