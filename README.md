@@ -11,3 +11,6 @@ we are stopping today as of dated 25/1/24 at 11:05 pm
 #January 26/1/2024 
 <br>
 today we r learning taking input 
+<br>
+#January 27th 2024
+today we r going to learn python from cs50 and i actually don't think we r folllowing some pattern 
