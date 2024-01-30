@@ -23,7 +23,7 @@ Hello(name)
 
 # now we are gonna solve a problem for convenience of accessing functions from any part of the code sso what essessentially we are going to do is create main and we r gonna comment out the previous code too
 
-
+"""
 def main():
     Hello()
     name = input("Enter your name:")
@@ -32,6 +32,21 @@ def main():
 
 def Hello(name="World"):
     print("Hello,", name)
+
+
+main()
+"""
+
+
+def main():
+    number = int(input("Enter a number:"))
+    print(f"The squared result of {number} is:", square(number))
+
+
+def square(res):
+    # return res*res            # THIS IS ANOTHER WAY TOO FIND POWER
+    return res**2  # THIS IS A WAY TO FIND POWER
+    # return pow(res,2)     #THIS IS ALSO ANOTHER WAY TO FIND POWER
 
 
 main()
