@@ -28,8 +28,29 @@ print(number)
 
 # Now we r going to use shuffle which as name suggests shuffles things
 
+"""
 import random
 
 Cards = ["Jack", "King", "Queen"]
 random.shuffle(Cards)
-print(Cards)
+# As the output printed is in the form of list we can convert it into single element using for loop
+for card in Cards:
+    print(card)
+
+"""
+
+# Now another example ussing statistics module
+"""
+import statistics
+
+print(statistics.mean([100, 90]))
+"""
+
+
+# Now we r going to see the use of sys.argv which returns whatever logged in the terminal window
+import sys
+
+try:
+    print("Hello,", sys.argv[1])
+except IndexError:
+    print("No arguments were entered")
