@@ -48,9 +48,40 @@ print(statistics.mean([100, 90]))
 
 
 # Now we r going to see the use of sys.argv which returns whatever logged in the terminal window
+
+"""
 import sys
 
 try:
     print("Hello,", sys.argv[1])
 except IndexError:
     print("No arguments were entered")
+"""
+"""
+#  A python program to print the use of cowsay
+
+import cowsay
+import sys
+
+cowsay.trex("hello,")
+"""
+
+
+# Now using request module for API requests
+
+import requests
+import json
+
+response = requests.get(
+    "https://itunes.apple.com/search?entity=song&limit=25&term=5%20seconds%20of%20summer"
+)
+# print(response.json())   here we r seeing the raw JSON script of the API
+# now we r going to see using the json package
+
+
+# print(json.dumps(response.json(), indent=2))
+
+# n Now we r going to see how to iterate over things  like of the entire term list from the API
+o = response.json()
+for result in o["results"]:
+    print(result["trackName"])
