@@ -69,6 +69,7 @@ cowsay.trex("hello,")
 
 # Now using request module for API requests
 
+"""
 import requests
 import json
 
@@ -85,3 +86,10 @@ response = requests.get(
 o = response.json()
 for result in o["results"]:
     print(result["trackName"])
+"""
+
+# Now we are going to look at the creating ur own custom module and using it
+from impfile import hello
+
+User_Name = input("Enter Your Name:")
+hello(User_Name)
