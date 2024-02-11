@@ -18,7 +18,9 @@ def test_Imp_Sq():
         print("3 squared is not 9")
     '''
 
-    # as in the above program we used various try and except to fix errors but it is not efficient as there is too many lines of code therefore to fix this
+    # as in the above program we used various try and except to fix errors but it is not efficient as there is too many lines of code therefore to fix this we use the package named pytest which does try except on its own 
+
+# so as we know wt the issue is and how it reacts when a error is there we will now cheeck how it reacts for correct things
 
     assert calc_Sq(2) == 4
     assert calc_Sq(3) == 9

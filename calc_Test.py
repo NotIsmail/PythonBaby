@@ -4,7 +4,7 @@ def main():
 
 
 def calc_Sq(n):
-    return n + n
+    return n * n
 
 
 if __name__ == "__main__":
