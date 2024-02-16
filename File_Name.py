@@ -53,6 +53,7 @@ with open("Name_List.csv") as file:
 
 
 # The above code actually being too cryptic too read as a reason we now change it too a little easier code to write
+"""
 Celebs=[]
 with open("Name_List.csv") as file:
     for line in file:
@@ -62,3 +63,21 @@ with open("Name_List.csv") as file:
 # We can even sort the names like below
 for Name_sort in sorted(Celebs):
     print(Name_sort)
+"""
+
+# w instead of sorting the name in the english manner we can sort it in according to the names
+Celebs = []
+with open("Name_List.csv") as file:
+    for line in file:
+        name, profession = line.strip().split(",")
+        celeb = {"Name": name, "profession": profession}
+        Celebs.append(celeb)
+
+#def get_key(celeb):
+    #return celeb["Name"]
+
+# now we saw a way to take in the dictionary key and returning it's value here now we can use a keeyword where we can do it wihtout func.
+
+for celeb in sorted(Celebs, key=lambda student:student["Name"]):
+    print(f"{celeb['Name']} is in {celeb['profession']}")
+
