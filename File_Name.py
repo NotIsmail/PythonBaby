@@ -66,6 +66,7 @@ for Name_sort in sorted(Celebs):
 """
 
 # w instead of sorting the name in the english manner we can sort it in according to the names
+"""
 Celebs = []
 with open("Name_List.csv") as file:
     for line in file:
@@ -80,4 +81,45 @@ with open("Name_List.csv") as file:
 
 for celeb in sorted(Celebs, key=lambda student:student["Name"]):
     print(f"{celeb['Name']} is in {celeb['profession']}")
+"""
 
+# now we r going to use the module named csv reader
+
+"""
+import csv
+
+celebs = []
+with open("Name_List.csv") as file:
+    reader = csv.reader(file)
+    for name, profession in reader:
+        celebs.append({"name": name, "profession": profession})
+
+    for celeb in sorted(celebs, key=lambda celeb: celeb["name"]):
+        print(f"{celeb['name']} is in {celeb['profession']}")
+"""
+
+
+# Now we are going to look at the way where we use a function named csvdictreader which helps in accessing the key and values more easily
+# Importance of csv is even when the data column is changed the things remain same
+"""
+import csv
+
+celebs = []
+with open("Name_List.csv") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        celebs.append({"name": row["name"], "profession": row["profession"]})
+
+    for celeb in sorted(celebs, key=lambda celeb: celeb["name"]):
+        print(f"{celeb['name']}  is a {celeb['profession']}")
+"""
+
+
+# Now writing to a csv file
+import csv
+
+name = input("Enter your name:")
+professions = input("Enter your profeession:")
+with open("Name_List.csv", "a") as file:
+    writer = csv.writer(file)
+    writer.writerow([name, professions])
