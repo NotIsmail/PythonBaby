@@ -116,6 +116,7 @@ with open("Name_List.csv") as file:
 
 
 # Now writing to a csv file
+"""
 import csv
 
 name = input("Enter your name:")
@@ -123,3 +124,12 @@ professions = input("Enter your profeession:")
 with open("Name_List.csv", "a") as file:
     writer = csv.writer(file)
     writer.writerow([name, professions])
+"""
+
+import csv
+
+profession = input("Enter your profession:")
+name = input("Enter your name:")
+with open("Name_List.csv", "a") as file:
+    write = csv.DictWriter(file, fieldnames=["profession", "name"])
+    write.writerow({"profession": profession, "name": name})
