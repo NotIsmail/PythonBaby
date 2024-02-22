@@ -5,6 +5,9 @@
 
 class Student:
     def __init__(self, name, profession) -> None:
+        # now we are using the if condition to tackle the situation where there is no name entered
+        if not name:
+            raise ValueError("Missing name")
         self.name = name
         self.profession = profession
 
