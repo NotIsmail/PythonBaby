@@ -25,7 +25,17 @@ mail=input("Enter your E-mail:")
 # now in the above code we could've written a whole ass sentence and it would've considered value as there is '.' and '+' value which includes value
 # therefore it can be fixed as follows
 # here this just sees that wtever text is in '^' and '$' is matched and then returned true
-if re.search(r"^.+@.+\.edu$", mail): 
+
+#if re.search(r"^.+@.+\.edu$", mail): # here we can many number of '@" signs and it will be considered valid to fixx this"
+
+#if re.search(r"^[^@]+@[^@]+\.edu$",mail): # now we might do similar conditions like in this one for example only character things
+
+#if re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.edu$",mail): # now here the condition is like it only accepts alphanumeric and @ and alphanumeric
+
+# the above approach might seem a little cryptic as there is so many conditions included in that so to fix that (it is correct tho)
+
+#the another small change that can be done is sometimes the user inputs email in uppercase which turns out as error to fix it 
+if re.search(r"^\w+@\w+\.(edu|com|in|net|org|)$",mail,re.IGNORECASE): # this \w accepts all kind of alphanumeric input and even the domain names can be chnaged using the ("name"|"name")
     print("valid")
 else:
     print("invalid")
