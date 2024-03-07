@@ -35,7 +35,9 @@ mail=input("Enter your E-mail:")
 # the above approach might seem a little cryptic as there is so many conditions included in that so to fix that (it is correct tho)
 
 #the another small change that can be done is sometimes the user inputs email in uppercase which turns out as error to fix it 
-if re.search(r"^\w+@\w+\.(edu|com|in|net|org|)$",mail,re.IGNORECASE): # this \w accepts all kind of alphanumeric input and even the domain names can be chnaged using the ("name"|"name")
+# some emails have multiple dots then followed by domain and subdomian wwhich our code reacts to as error whereas the below fix made may help it
+if re.search(r"^\w+@(\w+\.)?\w+\.(edu|com|in|net|org|)$",mail,re.IGNORECASE): # this \w accepts all kind of alphanumeric input and even the domain names can be chnaged using the ("name"|"name")
+
     print("valid")
 else:
     print("invalid")
