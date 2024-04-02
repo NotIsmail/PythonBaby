@@ -55,6 +55,27 @@ class Student:
         self.name=name
         self.genre=genre
         self.movie=movie
+    
+    def actor(self):                    # so here what we did was to create a own custom classes
+        match self.genre:
+            case "romance":
+                print("Ryan Gosling")
+            case "drama":
+                print("Cilian Murphy")
+            case "action":
+                print("Tom Cruise")
+            case "biographhy":
+                print("Will Smith")
+            case "war":
+                print("Brad Pitt")
+            case "crime":
+                print("Christian Bale")
+            case "fantasy":
+                print("Dwayne Johnson")
+            case "sci-fi":
+                print("Timothee Chalamet")
+            case "thriller":
+                print("Leonardo Di Caprio")
 
     def __str__(self):
         '''return "a person"'''  #so this thing kind of returns a value wen no data is entered and not a cryptic memory location we got some issue the required output wasn't recieved so the below value works as much as the print statement but also returns in redable form not like in the print statement
@@ -63,7 +84,7 @@ class Student:
 
 def main():
     stu_data=get_student()
-    print(stu_data)       # the code in this print statement kind of accessed the obj and then printed it but now to reduc the code we did this and when we run this code we get a cryptic output stating it's location in the computer's memory so to fix this we kinda use the above def __str__ method
+    print(stu_data.actor())       # the code in this print statement kind of accessed the obj and then printed it but now to reduc the code we did this and when we run this code we get a cryptic output stating it's location in the computer's memory so to fix this we kinda use the above def __str__ method
 
 def get_student():                                          # this is called attributes 
     name=input("Enter your name:")
