@@ -1,0 +1,26 @@
+from tkinter import *
+class MyEntry:
+    def __init__(self,root) -> None:
+        self.f=Frame(root,width=500,height=350)
+        self.f.propagate(0)
+        self.f.pack()
+        self.lbl1=Label(text="Enter Username")
+        self.lbl2=Label(text="enter password")
+        self.enter1=Entry(self.f,bg="white",fg="black",width=30,font=("Arial",30,'bold'))
+        self.enter2=Entry(self.f,bg="white",fg="black",width=30,font=("Arial",30,'bold'),show='*')
+        # self.enter1.bind('<Return>',self.display)
+        self.enter2.bind('<Return>',self.display)
+        self.lbl1.place(x=50,y=100)
+        self.enter1.place(x=200,y=100)
+        self.lbl2.place(x=50,y=200)
+        self.enter2.place(x=200,y=150)
+    def display(self,event):
+        str1=self.enter1.get()
+        str2=self.enter2.get()
+        lbl1=Label(text=f"your username:{str1}",width=50,fg="black",bg="white")
+        lbl2=Label(text=f"your password:{str2}",width=50,fg="black",bg="white")
+        lbl1.place(x=50,y=200)
+        lbl1.place(x=50,y=220)
+root=Tk()
+me=MyEntry(root)
+root.mainloop()
